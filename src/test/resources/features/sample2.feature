@@ -1,4 +1,12 @@
-Feature: Calculator_Diff
+@addition
+Feature: Calculator
+  Scenario: Add two numbers
+    Given I have a calculator
+    When I add 10 and 20
+    Then the result should be 30
+
+  @subtraction @multiplication @division
+  Feature: Calculator
   Scenario: Subtract two numbers
     Given I have a calculator
     When I subtract 10 from 20

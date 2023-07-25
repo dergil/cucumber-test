@@ -1,6 +1,14 @@
 pipeline {
     agent any
 
+    parameters {
+        choice(
+            name: 'TAGS_TO_RUN',
+            choices: "@addition @subtraction @multiplication @division",
+            description: 'Choose the tags to execute'
+        )
+    }
+
     stages {
         stage('Build') {
             steps {
@@ -10,7 +18,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './gradlew test'
+                sh "./gradlew test -Dcucumber.filter.tags='${params.TAGS_TO_RUN}'"
             }
         }
     }
