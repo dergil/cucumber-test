@@ -16,6 +16,8 @@ class SampleStepDefinitions {
     @When("I add {int} and {int}")
     def whenIAddTwoNumbers(int num1, int num2) {
         result = calculator.add(num1, num2)
+        println ("Executing addition")
+
     }
 
     @Then("the result should be {int}")

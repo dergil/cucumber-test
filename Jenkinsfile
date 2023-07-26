@@ -22,4 +22,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            // Publish Cucumber JSON report
+            cucumber jsonReportDirectory: 'target/cucumber-reports'
+        }
+    }
 }

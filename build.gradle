@@ -12,6 +12,7 @@ repositories {
 
 dependencies {
     implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    implementation 'io.cucumber:cucumber-java:7.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testImplementation 'io.cucumber:cucumber-java:7.1.0'
     testImplementation 'io.cucumber:cucumber-junit:7.1.0'
